@@ -1,0 +1,1124 @@
+@charset "UTF-8";
+
+.wrapper {
+  max-width: 100%;
+  margin: 0 auto;
+}
+
+
+.container {
+  /* background-color: yellowgreen; */
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+body {
+  background-color: #c2e4e7;
+}
+
+h2 {
+  color: #fff;
+  font-family: 'Noto Serif JP', serif;
+  /* font-weight: lighter; */
+  line-height: 1em;
+  font-size: 60px;
+  width: auto;
+  height: auto;
+  text-align: left;
+}
+
+p {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #4a4a4a;
+  font-size: 18px;
+  line-height: 2em;
+}
+
+/* ヘッダー */
+
+header {
+  display: flex;
+}
+
+h1 {
+  color: #fff;
+  font-family: 'Noto Serif JP', serif;
+  margin-left: 70px;
+  margin-top: 30px;
+  text-decoration: none;
+}
+
+a {
+  text-decoration: none;
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #4a4a4a;
+  font-size: 16px;
+}
+
+
+/* メイン画像たち */
+
+.top {
+  display: flex;
+  width: 1310px;
+  height: 550px;
+  /* background-color: #449ab2; */
+}
+
+
+/* works */
+.box1 {
+  cursor: pointer;
+  height: 300px;
+  margin-inline: auto;
+  margin-top: 250px;
+  position: relative;
+  width: 300px;
+}
+/* 画像のスタイル */
+.box1 img {
+  height: auto;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #c2e4e7;;
+}
+/* 2枚目の画像は最初透明 */
+.box1 img:last-of-type {
+  opacity: 0;
+  transition: opacity .7s;
+}
+/* hoverすると2枚目の画像が透明じゃなくなる */
+.box1:hover img {
+  opacity: 1;
+}
+
+
+
+/* about */
+.box2 {
+  cursor: pointer;
+  height: 550px;
+  margin-inline: auto;
+  margin-top: 70px;
+  position: relative;
+  width: 700px;
+}
+/* 画像のスタイル */
+.box2 img {
+  height: auto;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #c2e4e7;;
+}
+/* 2枚目の画像は最初透明 */
+.box2 img:last-of-type {
+  opacity: 0;
+  transition: opacity .7s;
+}
+/* hoverすると2枚目の画像が透明じゃなくなる */
+.box2:hover img {
+  opacity: 1;
+}
+
+
+/* contact */
+.box3 {
+  cursor: pointer;
+  height: 300px;
+  margin-inline: auto;
+  margin-top: 20px;
+  position: relative;
+  width: 300px;
+}
+/* 画像のスタイル */
+.box3 img {
+  height: auto;
+  left: 0;
+  position: absolute;
+  width: 100%;
+  background-color: #c2e4e7;;
+}
+/* 2枚目の画像は最初透明 */
+.box3 img:last-of-type {
+  opacity: 0;
+  transition: opacity .7s;
+}
+/* hoverすると2枚目の画像が透明じゃなくなる */
+.box3:hover img {
+  opacity: 1;
+}
+
+
+
+
+
+
+
+h2 {
+  font-family: "Zen Maru Gothic", serif;
+  font-style: normal;
+  color: #ffffff;
+  font-size: 70px;
+  width: 300px;
+  height: 150px;
+  /* background-color: violet; */
+  margin-top: 50px;
+  margin-right: 10%;
+}
+
+
+/*==================================================
+ハンバーガーメニュー
+===================================*/
+
+/*ボタン外側※レイアウトによってpositionや形状は適宜変更してください*/
+.openbtn {
+  /*ボタン内側の基点となるためrelativeを指定。
+追従するナビゲーションの場合はfixed＋top、rightといった位置をセットで指定*/
+  position: relative;
+  background: #ffffff;
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+  right: 0;
+}
+
+/*ボタン内側*/
+.openbtn .openbtn-area {
+  transition: all .6s;
+  /*アニメーションの設定*/
+  width: 50px;
+  height: 50px;
+}
+
+.openbtn span {
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background: #62cce9;
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+
+/*activeクラスが付与されると .openbtn-areaが360度回転し、その中の線が回転して×に*/
+.openbtn.active .openbtn-area {
+  transform: rotate(360deg);
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+
+/*========= ハンバーガーメニュークリック画面 ===============*/
+
+/*アクティブになったエリア*/
+#g-nav.panelactive {
+  /*position:fixed;にし、z-indexの数値を大きくして前面へ*/
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+/*丸の拡大*/
+.circle-bg {
+  position: fixed;
+  z-index: 3;
+  /*丸の形*/
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background: #eefbff;
+  /*丸のスタート位置と形状*/
+  transform: scale(0);
+  /*scaleをはじめは0に*/
+  right: -50px;
+  top: -50px;
+  transition: all .6s;
+  /*0.6秒かけてアニメーション*/
+}
+
+.circle-bg.circleactive {
+  transform: scale(50);
+  /*クラスが付与されたらscaleを拡大*/
+}
+
+/*ナビゲーションの縦スクロール*/
+#g-nav-list {
+  display: none;
+  /*はじめは表示なし*/
+  /*ナビの数が増えた場合縦スクロール*/
+  position: fixed;
+  z-index: 999;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+#g-nav.panelactive #g-nav-list {
+  display: block;
+  /*クラスが付与されたら出現*/
+}
+
+/*ナビゲーション*/
+#g-nav ul {
+  opacity: 0;
+  /*はじめは透過0*/
+  /*ナビゲーション天地中央揃え※レイアウトによって調整してください。不必要なら削除*/
+  position: absolute;
+  z-index: 999;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*背景が出現後にナビゲーションを表示*/
+#g-nav.panelactive ul {
+  opacity: 1;
+}
+
+/* 背景が出現後にナビゲーション li を表示※レイアウトによって調整してください。不必要なら削除*/
+#g-nav.panelactive ul li {
+  animation-name: gnaviAnime;
+  animation-duration: 1s;
+  animation-delay: .2s;
+  /*0.2 秒遅らせて出現*/
+  animation-fill-mode: forwards;
+  opacity: 0;
+}
+
+@keyframes gnaviAnime {
+  0% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/*リストのレイアウト設定*/
+#g-nav li {
+  text-align: center;
+  list-style: none;
+}
+
+#g-nav li a {
+  color: #62cce9;
+  text-decoration: none;
+  padding: 10px;
+  display: block;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: bold;
+}
+
+
+/*========= ボタンのためのCSS ===============*/
+.openbtn {
+  position: fixed;
+  top: 35px;
+  right: 50px;
+  z-index: 9999;
+  /*ボタンを最前面に*/
+  cursor: pointer;
+  width: 50px;
+  height: 50px;
+}
+
+/*×に変化*/
+.openbtn span {
+  display: inline-block;
+  transition: all .4s;
+  position: absolute;
+  left: 14px;
+  height: 3px;
+  border-radius: 2px;
+  background-color: #62cce9;
+  width: 45%;
+}
+
+.openbtn span:nth-of-type(1) {
+  top: 15px;
+}
+
+.openbtn span:nth-of-type(2) {
+  top: 23px;
+}
+
+.openbtn span:nth-of-type(3) {
+  top: 31px;
+}
+
+.openbtn.active span:nth-of-type(1) {
+  top: 18px;
+  left: 18px;
+  transform: translateY(6px) rotate(-45deg);
+  width: 30%;
+}
+
+.openbtn.active span:nth-of-type(2) {
+  opacity: 0;
+}
+
+.openbtn.active span:nth-of-type(3) {
+  top: 30px;
+  left: 18px;
+  transform: translateY(-6px) rotate(45deg);
+  width: 30%;
+}
+
+
+
+
+/* -----------------aboutページ----------------------- */
+
+
+/* fadeUp */
+
+.fadeUp3{
+  animation-name:fadeUpAnime;
+  animation-duration:1.3s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+  
+  /* スクロールをしたら出現する要素にはじめに透過0を指定　*/
+   
+  .fadeUp3Trigger{
+      opacity: 0;
+  }
+  
+/* 下から */
+
+.fadeUp{
+  animation-name:fadeUpAnime;
+  animation-duration:0.5s;
+  animation-fill-mode:forwards;
+  opacity:0;
+  }
+  
+  @keyframes fadeUpAnime{
+    from {
+      opacity: 0;
+    transform: translateY(100px);
+    }
+  
+    to {
+      opacity: 1;
+    transform: translateY(0);
+    }
+  }
+  
+
+  .fadeUp2{
+    animation-name:fadeUpAnime;
+    animation-duration:1.3s;
+    animation-fill-mode:forwards;
+    opacity:0;
+    }
+    
+    @keyframes fadeUpAnime{
+      from {
+        opacity: 0;
+      transform: translateY(100px);
+      }
+    
+      to {
+        opacity: 1;
+      transform: translateY(0);
+      }
+    }
+    
+
+  
+main {
+  position: relative;
+}
+
+.moji p {
+  font-weight: bold;
+  color: #58b5ce;;
+}
+
+#me {
+  display: flex;
+  width: 1100px;
+  margin: 50px auto;
+  margin-bottom: 10%;
+  /* background-color: #510b14; */
+}
+
+
+
+.my_name {
+  display: flex;
+  flex-flow: column;
+
+}
+
+.my_name section {
+  width: 200px;
+  margin: 50px 0 0 29px;
+}
+.my_name2 {
+display: flex;
+width: auto;
+/* background-color: #449ab2; */
+}
+
+.my_name2 img{
+width: 550px;
+height: 550px;
+margin-right: 10px;
+/* background-color: #ffcc75; */
+  }
+
+.my_name2 section {
+  width: 200px;
+  margin: 60px 0 50px 30px;
+}
+
+.prof p {
+  margin: 10px auto 0;
+  font-size: 18px;
+  line-height: 2em;
+  overflow-wrap: normal;
+  width: 910px;
+    /* background-color: cadetblue; */
+}
+
+/* 名前身だし */
+
+.kunibe h3{
+  position: relative;
+  padding: 1rem 1.5rem;
+  font-size: 35px;
+  font-weight: bold;
+  /* background-color: #58b5ce; */
+  width: 300px;
+  margin: 0 auto;
+  letter-spacing: 0.1em;
+}
+
+.kunibe h3::before,
+.kunibe h3::after {
+    position: absolute;
+    top: 0.8rem;
+    height: 1.8rem;
+    content: '';
+}
+
+.kunibe h3::before {
+    border-left: solid 4px;
+    left: 0;
+    margin-top: 10%;
+    transform: rotate(-30deg);
+}
+
+.kunibe h3::after {
+    border-right: solid 4px;
+    right: 0;
+    margin-top: 10%;
+    transform: rotate(30deg);
+}
+
+
+/* 強みなど */
+.my_st {
+  width: 1200px;
+  /* background-color: blanchedalmond; */
+  margin: 0 auto 150px;
+}
+
+section {
+  /* background-color: #449ab2; */
+  margin-left: 60px;
+}
+
+.tuyo {
+  display: flex;
+}
+
+.tuyo img {
+  margin: 50px 0 100px 150px;
+}
+
+.tuyo h4 {
+font-weight: bold;
+}
+
+
+/* やりたいこと */
+
+.box26 {
+  position: relative;
+  margin: 0 auto 200px;
+  padding: 0.5em 1em;
+  border: solid 5px #ffffff;
+  border-radius: 8px;
+  width: 1000px;
+}
+
+
+.box26 .box-title {
+  position: absolute;
+  display: inline-block;
+  top: -13px;
+  left: 10px;
+  padding: 0 20px;
+  line-height: 1;
+  font-size: 19px;
+  background: #c2e4e7;
+  color: #58b5ce;
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: bold;
+  font-size: 23px;
+  margin: 0 0 0 20px;
+}
+.box26 p {
+  font-size: 18px;
+  margin: 30px; 
+  padding: 0;
+}
+
+
+/* 使用ツール */
+
+.skill {
+  margin: 0 auto 100px;
+  padding: 50px 0;
+  width: 1000px;
+  border-radius: 45px;
+  background-color: #fff
+}
+
+
+
+h4 {
+  margin: 50px 0 10px;
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #58b5ce;
+  font-size: 24px;
+}
+
+
+h6 {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #58b5ce;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  margin: 50px 0 20px;
+}
+
+/* 吹き出し 性格*/
+
+.balloon3-right {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 15px 1.5em 0;
+  padding: 0 5px;
+  width: 260px;
+  height: 260px;
+  line-height: 90px;
+  text-align: center;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: bold;
+  background: #d0edff;
+  border-radius: 50%;
+  box-sizing: border-box;
+}
+
+.balloon3-right:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #d0edff;
+  z-index: 0;
+}
+
+/* 吹き出し　特技 */
+
+.balloon2-right {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 15px 1.5em 0;
+  padding: 0 5px;
+  width: 260px;
+  height: 260px;
+  line-height: 90px;
+  text-align: center;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: bold;
+  background: #d0edff;
+  border-radius: 50%;
+  box-sizing: border-box;
+
+}
+
+.balloon2-right:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  right: -25px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-left: 15px solid #d0edff;
+  z-index: 0;
+}
+
+/* 吹き出し　好きなもの */
+.balloon3-left {
+  position: relative;
+  display: inline-block;
+  margin: 1.5em 0 1.5em 15px;
+  padding: 0 5px;
+  width: 260px;
+  height: 260px;
+  line-height: 90px;
+  text-align: center;
+  color: #FFF;
+  font-size: 20px;
+  font-weight: bold;
+  background: #d0edff;
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin-top: 50%;
+
+}
+
+.balloon3-left:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  margin-top: -15px;
+  border: 15px solid transparent;
+  border-right: 15px solid #d0edff;
+  z-index: 0;
+}
+
+
+/* -----------------worksページ----------------------- */
+
+
+
+
+
+
+.workstitel h3 {
+  border-bottom: double 7px #58b5ce;
+  width: 200px;
+  margin: 0 auto;
+}
+
+
+
+.siteurl a{
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #58b5ce;
+  font-size: 20px;
+  border-bottom: 1px dotted #ffffff;
+}
+
+
+.siteurl a:hover{
+color: #ffffff;
+}
+
+
+#list img {
+  border-radius: 45px;
+}
+
+#list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 200px;
+}
+
+#list p {
+  color: #449ab2;
+}
+
+.works_list {
+  margin-top: 90px;
+}
+
+/* マウスオーバーの動き */
+#list a img {
+  position: relative;
+  top: 0;
+}
+
+#list a img:hover {
+  top: -30px;
+  transition: 0.3s;
+}
+
+
+
+
+/* -----------------works詳細ページ----------------------- */
+
+h3 {
+  text-align: center;
+  margin: 50px 0 0;
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #58b5ce;
+  font-size: 27px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+
+#worktop {
+  display: flex;
+  /* background-color: #a25e5e; */
+  width: 600px;
+  height: 150px;
+  margin: 70px auto 90px;
+  text-align: left;
+  
+}
+
+#worksimg {
+  background-color: #fff;
+  width: 900px;
+  height: 620px;
+  border-radius: 45px;
+  margin: 50px auto 0;
+}
+
+#worksimg img {
+  margin: 35px auto;
+}
+
+.date {
+  margin: 50px;
+  /* background-color: yellowgreen; */
+  width: 250px;
+  margin: 0 auto;
+  margin-left: 0;
+}
+
+.date p {
+  margin-top: 15px;
+  text-align: left;
+}
+
+.date_2 {
+  margin: 50px;
+  /* background-color: yellowgreen; */
+  width: 250px;
+  margin: 0 auto;
+}
+
+.date_2 p {
+  margin-top: 15px;
+  text-align: left;
+}
+
+
+.target {
+  margin: 50px;
+  /* background-color: yellowgreen; */
+  width: 600px;
+  margin: 0 auto;
+}
+
+.target p {
+  margin: 15px;
+  text-align: left;
+  width: 600px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  margin-top: 20px;
+}
+
+.design {
+  margin: 50px;
+  /* background-color: yellowgreen; */
+  width: 600px;
+  margin: 0 auto 50px;
+}
+
+.design p {
+  margin: 15px;
+  text-align: left;
+  width: 600px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* 映画サイト */
+
+.site_page1 img {
+  padding: 0 0 200px;
+}
+
+/* うさぎカフェ、台湾カフェ */
+.site_page2 img {
+  vertical-align: top;
+  padding: 0 10px 50px;
+}
+
+.site_page2 {
+  margin-bottom: 200px;
+}
+
+.site_page2 h6 {
+  text-align: center;
+  margin: 50px 0 20px;
+}
+
+
+/* まるまるあにまるずページ */
+
+.caralist {
+  width: 150px;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  /* background-color: yellowgreen; */
+}
+
+.caralist p {
+  font-family: "Zen Maru Gothic", serif;
+  font-weight: 400;
+  font-style: normal;
+  color: #58b5ce;
+  font-size: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.caralist_top {
+  width: 700px;
+  display: flex;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+
+.menulist_top {
+  display: flex;
+  justify-content: space-between;
+  width: 900px;
+  margin: 50px auto 0;
+  /* background-color: aliceblue; */
+}
+
+.caralist_top_usa {
+  width: 700px;
+  display: flex;
+  margin: 0 auto;
+}
+
+
+.menulist_top_usa {
+  display: flex;
+  justify-content: space-between;
+  width: 980px;
+  margin: 0 auto 50px;
+  /* background-color: aliceblue; */
+}
+
+
+
+
+
+
+/* ---------------footer----------------- */
+
+/*まずはお決まりのボックスサイズ算出をborer-boxに */
+
+:before,
+:after {
+  -webkit-box-sizing: inherit;
+  box-sizing: inherit;
+}
+
+html {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 62.5%;
+  /*rem算出をしやすくするために*/
+}
+
+.btn,
+a.btn,
+button.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.5;
+  position: relative;
+  display: inline-block;
+  padding: 1rem 4rem;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  text-align: center;
+  vertical-align: middle;
+  text-decoration: none;
+  letter-spacing: 0.1em;
+  color: #62cce9;
+  border-radius: 0.5rem;
+  margin: 50px 0 100px;
+}
+
+
+a.btn-border {
+  border: 2px solid #62cce9;
+  border-radius: 2;
+  background: #fff;
+}
+
+a.btn-border:hover {
+  color: #fff;
+  background: #62cce9;
+}
+
+
+/* トップへ戻る */
+/* #contents{
+  height:600px;
+}
+h1{
+  text-align:center;
+}
+.sankaku,
+.text{
+  text-align:center;
+}
+#page-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  font-size: 14px;
+  line-height: 1;
+  z-index: 99;
+}
+#page-top a {
+  background: #ab101b;
+  text-decoration: none;
+  color: #fff;
+  width: 60px;
+  padding: 28px 5px;
+  text-align: center;
+  display: block;
+  border-radius: 90px;
+  opacity: 0.9;
+  transition: all .3s ease;
+}
+#page-top a:hover {
+  text-decoration: none;
+  opacity: .5;
+} */
+
+/* -------スマートフォンページ（767px以下）---------- */
+
+@media screen and (max-width: 767px) {
+
+  img {
+    width: 100%;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .container {
+    margin: 0 auto;
+    width: 80%;
+  }
+
+  .container {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  /* ヘッダー */
+
+  header {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 70% 70%;
+    background-repeat: no-repeat;
+    position: relative;
+
+  }
+}
